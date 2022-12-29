@@ -30,7 +30,7 @@ const PetDetailsPage = () => {
         <h3>Loading...</h3>
       ) : error ? (
         <div>
-          <Navigate to='/pet-details-not-found' />
+          <Navigate replace to='/pet-details-not-found' />
         </div>
       ) : (
         <main>
