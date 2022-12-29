@@ -1,17 +1,19 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // import useHistory here.
 
 const PetDetailsNotFound = () => {
 
-  // get the history object from useHistory()
+  const navigation = useNavigate();
 
   const goBack = () => {
-    // Go back!
+    navigation(-2);
   }
   
   return (
     <main className="page">
+      <div className='pet-details-not-found'>
       <h3>404: Who let the dogs out?</h3>
       <p>Sorry, but the details for this pet have not been uploaded by the shelter yet. Check back later!</p>
       <img
@@ -22,6 +24,7 @@ const PetDetailsNotFound = () => {
         <button className="button" onClick={goBack}>
           Go Back
         </button>
+        </div>
       </div>
     </main>
   );
